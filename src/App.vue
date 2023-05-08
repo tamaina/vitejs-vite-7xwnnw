@@ -47,7 +47,9 @@ const windows = ref<any[]>([1]);
     <div class="c3">
       <button @click="windows.push(1)">add window</button>
     </div>
-    <div v-for="window in windows" class="window">あ</div>
+    <div v-for="window in windows" class="window">
+      <div style="height: 50cqh; background: #00f">ええ</div>
+    </div>
   </div>
 </template>
 
