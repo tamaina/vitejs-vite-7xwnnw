@@ -11,14 +11,14 @@ const windows = ref<any[]>([1]);
     <div class="c1">
       <button class="button" @click="items2.unshift(1)">add</button>
       <div class="list">
-        <div v-for="item in items2" class="item">
-          <p>あああ</p>
+        <div v-for="(item, i) in items2" :key="i" class="item">
+          <p>header</p>
           <div class="body">
-            <p>いいい</p>
+            <p>body</p>
             <div class="inner">
               <div class="inner1">
                 <div class="inner2">
-                  <img src="./assets/image.webp" class="img" />
+                  <img src="./assets/vue.svg" class="img" />
                 </div>
               </div>
             </div>
@@ -29,14 +29,14 @@ const windows = ref<any[]>([1]);
     <div class="c2">
       <button class="button" @click="items.unshift(1)">add</button>
       <div class="list">
-        <div v-for="item in items" class="item">
-          <p>あああ</p>
+        <div v-for="(item, i) in items" :key="i" class="item">
+          <p>header</p>
           <div class="body">
-            <p>いいい</p>
+            <p>body</p>
             <div class="inner">
               <div class="inner1">
                 <div class="inner2">
-                  <img src="./assets/image.webp" class="img" />
+                  <img src="./assets/vue.svg" class="img" />
                 </div>
               </div>
             </div>
@@ -97,7 +97,7 @@ const windows = ref<any[]>([1]);
   grid-template-rows: 1fr;
   height: 100%;
   min-height: 64px;
-  max-height: clamp(64px, 50cqh, min(360px, 50vh));
+  max-height: 30cqh;
   overflow: clip;
 }
 .inner1 {
